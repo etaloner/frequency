@@ -31,7 +31,10 @@
 
             const nextData = () => {
               window.currentWordIndex++;
-              if (window.currentWordIndex >= dictionary.length) window.currentWordIndex = 0;
+              if (window.currentWordIndex >= dictionary.length) {
+                  alert('Поздравляю! Вы дошли до конца. Теперь можно начать с начала.');
+                  window.currentWordIndex = 0;
+              }
               window.currentWord = dictionary[window.currentWordIndex];
 
               document.getElementById('currentWord').innerHTML = window.currentWord;
